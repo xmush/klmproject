@@ -23,7 +23,7 @@
     <link href="{{asset('/dist/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-    <link href="{{asset('/dist/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('/dist/css/style.css?v=').time()}}" rel="stylesheet">
 
     <style>
     .mimg {
