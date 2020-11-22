@@ -87,6 +87,86 @@
             </div>
         </div>
 
+        <div class="container-water">
+            <div class="rain">
+                <div class="drop"></div>
+                <div class="waves">
+                    <div></div>
+                    <div></div>
+                </div>
+                <!-- <div class="splash"></div> -->
+                <div class="particles">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="rain">
+                <div class="drop"></div>
+                <div class="waves">
+                    <div></div>
+                    <div></div>
+                </div>
+                <!-- <div class="splash"></div> -->
+                <div class="particles">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="rain">
+                <div class="drop"></div>
+                <div class="waves">
+                    <div></div>
+                    <div></div>
+                </div>
+                <!-- <div class="splash"></div> -->
+                <div class="particles">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="rain">
+                <div class="drop"></div>
+                <div class="waves">
+                    <div></div>
+                    <div></div>
+                </div>
+                <!-- <div class="splash"></div> -->
+                <div class="particles">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div class="rain">
+                <div class="drop"></div>
+                <div class="waves">
+                    <div></div>
+                    <div></div>
+                </div>
+                <!-- <div class="splash"></div> -->
+                <div class="particles">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
         </div>
     </section><!-- #intro -->
 @endsection
@@ -106,7 +186,7 @@
               </div>
             </div>
 
-            <div class="col-lg-7 col-md-6">
+            <div class="col-lg-7 col-md-6 px-md-4">
                 <div class="about-content">
                     <h2>Information</h2>
                     <h3>Informasi dan Tata Cara Pendaftaran Event Makassar KOI Festival 2020 yang diselenggarakan oleh <span style="font-weight: 500;"> KOI Lovers Makassar Project</span>.</h3>
