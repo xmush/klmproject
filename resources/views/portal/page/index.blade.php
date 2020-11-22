@@ -76,19 +76,19 @@
         <div class="container d-flex h-100">
         <div class="row justify-content-center align-self-center">
             <div class="col-md-6 intro-info order-md-first order-last">
-            <h2>Makassar<br>Junior Koi Contest<br><span>2020</span></h2>
+            <h2>Makassar<br>KOI Festival<br><span>2020</span></h2>
             <div>
-                <a href="{{route('register')}}" class="btn-get-started scrollto">Daftar disini</a>
+                <a href="{{route('register')}}" class="btn-get-started scrollto">Daftar Disini</a>
             </div>
             </div>
-    
-            <div class="col-md-6 intro-img order-md-last order-first">
+
+            <div class="col-md-6 intro-img order-md-last order-first animated">
             <img src="{{asset('/dist/img/intro-kl.svg')}}" alt="" class="img-fluid">
             </div>
         </div>
 
         </div>
-    </section><!-- #intro -->    
+    </section><!-- #intro -->
 @endsection
 
 @section('s_info')
@@ -99,31 +99,31 @@
 
         <div class="container">
           <div class="row">
-  
+
             <div class="col-lg-5 col-md-6">
-              <div class="about-img">
-                <img src="{{asset('/dist/img/banner_contest.jpg')}}" alt="">
+              <div class="about-img scale-up-center">
+                <img src="{{asset('/dist/img/home_poster.jpeg')}}" alt="">
               </div>
             </div>
-  
+
             <div class="col-lg-7 col-md-6">
                 <div class="about-content">
                     <h2>Information</h2>
-                    <h3>Informasi dan Tata Cara Pendaftaran Event Makassar Junior Koi Kontest yang diselenggarakan oleh Koi Lovers Makassar Project</h3>
-                
+                    <h3>Informasi dan Tata Cara Pendaftaran Event Makassar KOI Festival 2020 yang diselenggarakan oleh <span style="font-weight: 500;"> KOI Lovers Makassar Project</span>.</h3>
+
                     <ul>
-                        <li><i class="ion-android-checkmark-circle"></i> Isi data diri secara lengkap yang tersedia pada menu form register atau klik Daftar disini </li>
-                        <li><i class="ion-android-checkmark-circle"></i> Login dengan menggunakan username dan password yang telah diisi sebelumnya pada menu register</li>
-                        <li><i class="ion-android-checkmark-circle"></i> Input jenis atau kategori yang diikuti pada sub menu fish entry</li>
-                        <li><i class="ion-android-checkmark-circle"></i> Lakukan pembayaran dengan cara transfer ke rekening panitia dan lakukan konfirmasi pembayaran melalui WA ke nomor panitia</li>
+                        <li><i class="ion-android-checkmark-circle"></i> Isi data diri secara lengkap yang tersedia pada menu form register atau klik <a href="{{route('register')}}">Disini</a>. </li>
+                        <li><i class="ion-android-checkmark-circle"></i> Login dengan menggunakan <span class="highlight">username</span> dan <span class="highlight">password</span> yang telah diisi sebelumnya pada menu register.</li>
+                        <li><i class="ion-android-checkmark-circle"></i> Input jenis atau kategori yang diikuti pada sub menu <span class="highlight">Entry Ikan</span>.</li>
+                        <li><i class="ion-android-checkmark-circle"></i> Lakukan pembayaran dengan cara transfer ke rekening panitia dan lakukan konfirmasi pembayaran melalui WA ke nomor panitia.</li>
                         <li><i class="ion-android-checkmark-circle"></i> Untuk informasi selengkapnya silahkan hubungi kami di +62-852-9722-2999.</li>
                     </ul>
                 </div>
             </div>
           </div>
         </div>
-  
-    </section><!-- #about -->    
+
+    </section><!-- #about -->
     <div class="modal fade" id="welcome" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
@@ -132,9 +132,9 @@
                     <img src="{{'/dist/img/lg_klm.jpg'}}" class="rounded mimg" alt="KLM PROJECT 2020">
                 </div>
             </div>
-            <div class="modal-footer my-0 py-1 d-flex justify-content-center">
-              <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
-              <a href="{{route('register')}}" class="btn btn-sm btn-primary">Daftar</a>
+            <div class="modal-footer my-0 py-1 pt-4 d-flex justify-content-center">
+              <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Tutup</button>
+              <a href="{{route('register')}}" style="background-color: #0481A6; border-color: #0481A6;" class="btn btn-sm btn-primary">Daftar</a>
             </div>
           </div>
         </div>
