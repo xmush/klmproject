@@ -12,7 +12,7 @@ class PortalController extends Controller
     }
 
     public function summary(){
-        $jml_own = \App\User::where('role_id', 3)->count();
+        $jml_own = \App\User::where('role_id', 2)->count();
         $jml_fish = \App\Models\Tbl_user_fish::count();
         $jml_var = \App\Models\Tbl_user_fish::select('fish_id', DB::raw('count(*) as total'))
                         ->groupBy('fish_id')

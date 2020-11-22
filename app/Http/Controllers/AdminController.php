@@ -17,7 +17,7 @@ use Mush;
 class AdminController extends Controller
 {
     public function index() {
-        $n_owner = \App\User::where('role_id', 3)->count();
+        $n_owner = \App\User::where('role_id', 2)->count();
         $n_fish = \App\Models\Tbl_user_fish::all()->count();
         $n_lfish = \App\Models\Tbl_user_fish::where('status', 'LUNAS')->count();
         $n_bfish = \App\Models\Tbl_user_fish::where('status', 'BELUM LUNAS')->count();
@@ -41,7 +41,7 @@ class AdminController extends Controller
 
     public function listPeserta() {
         // $peserta = \App\Models\Tbl_bio::all()->paginate(10);
-        $peserta = \App\User::with(['bio','user_fish'])->where('role_id','=', 3)->get();
+        $peserta = \App\User::with(['bio','user_fish'])->where('role_id','=', 2)->get();
         // dd($peserta);
         return view('backend.admin.list_peserta', ['data_peserta' => $peserta]);
     }
@@ -246,7 +246,7 @@ class AdminController extends Controller
         DB::beginTransaction();
         
         $data_user = [
-            'role_id'   =>3,
+            'role_id'   =>2,
             'name'      =>$r->username,
             'email'     =>$r->email,
             'password'  =>bcrypt($r->password)
@@ -368,7 +368,7 @@ class AdminController extends Controller
 
     public function setupUserPass() {
 
-        $peserta = \App\User::where('role_id', 3)->get();
+        $peserta = \App\User::where('role_id', 2)->get();
 
         return view('backend.admin.c_pass_user', ['data_peserta' => $peserta]);
     }
@@ -405,7 +405,7 @@ class AdminController extends Controller
 
     public function addFishPoint() {
 
-        $fs = \App\User::where('role_id', 3)
+        $fs = \App\User::where('role_id', 2)
                                         ->get();
 
         return view('backend.admin.add_fish_point', ['data_fish' => $fs]);
@@ -545,7 +545,7 @@ class AdminController extends Controller
         $fish = \App\Models\Tbl_user_fish::with(['fish', 'bio'])
                                             ->where('status', 'LUNAS')
                                             ->get();
-        $user = \App\User::where('role_id', 3)->get();
+        $user = \App\User::where('role_id', 2)->get();
         $champ = \App\Models\Tbl_fish_champion::find($id);
 
         return view('backend.admin.show_champion', ['data_cat' => $cat, 'data_ikan' => $fish, 'champion' => $champ]);
