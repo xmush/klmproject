@@ -182,7 +182,7 @@
 
             <div class="col-lg-5 col-md-6">
               <div class="about-img scale-up-center">
-                <img src="{{asset('/dist/img/home_poster.jpeg')}}" alt="">
+                <img src="{{/dist/img/home_poster.jpeg'}}" alt="">
               </div>
             </div>
 
