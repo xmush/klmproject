@@ -13,18 +13,18 @@ class UserTblSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'mush',
+            'name' => env('SEED_NAME_ADMIN'),
             'role_id' => 1,
-            'email' => 'mush@mail.com',
-            'password' => bcrypt('admin1234'),
+            'email' => env('SEED_EMAIL_ADMIN'),
+            'password' => bcrypt(env('SEED_PASS_ADMIN')),
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
         DB::table('users')->insert([
-            'name' => 'user',
+            'name' => env('SEED_NAME_USER'),
             'role_id' => 2,
-            'email' => 'user@mail.com',
-            'password' => bcrypt('admin1234'),
+            'email' => env('SEED_EMAIL_USER'),
+            'password' => bcrypt(env('SEED_PASS_USER')),
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);

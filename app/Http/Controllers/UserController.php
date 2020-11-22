@@ -121,25 +121,25 @@ class UserController extends Controller
             'cat_id'             => $r->type_ukuran,
             'fish_size'          => $r->fish_size,
             'fish_picture'       => $img_path,
-            'fish_picture_thumb' => $r->img_thumb_path,
+            'fish_picture_thumb' => $img_thumb_path,
             'status'             => 'BELUM LUNAS',
             'date_reg'           => Carbon::now()->format('Y-m-d'),
             'time_reg'           => Carbon::now()->format('H:i:s')
         ];
 
-        // $fish = \App\Models\Tbl_user_fish::create($user_fish);
+        $fish = \App\Models\Tbl_user_fish::create($user_fish);
 
-        // if(!$fish) {
-        //     Session::flash('notif', ['type' => 'error', 'msg' => 'Gagal Daftar, Ulangi Lagi']);
-        //     DB::rollBack();
-        // }
-        // else {
-        //     DB::commit();
-        //     Session::flash('notif', ['type' => 'success', 'msg' => 'Ikan Berhasil Di daftarkan']);
-        //     return redirect()->route('user.fish', ['id'=> auth()->user()->id]);
-        // }
+        if(!$fish) {
+            Session::flash('notif', ['type' => 'error', 'msg' => 'Gagal Daftar, Ulangi Lagi']);
+            DB::rollBack();
+        }
+        else {
+            DB::commit();
+            Session::flash('notif', ['type' => 'success', 'msg' => 'Ikan Berhasil Di daftarkan']);
+            return redirect()->route('user.fish', ['id'=> auth()->user()->id]);
+        }
         
-        Session::flash('notif', ['type' => 'error', 'msg' => 'Sesi Pendaftaran telah selesai']);
+        // Session::flash('notif', ['type' => 'error', 'msg' => 'Sesi Pendaftaran telah selesai']);
         return redirect()->back();
 
     }

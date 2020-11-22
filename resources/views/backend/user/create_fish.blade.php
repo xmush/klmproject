@@ -118,7 +118,8 @@
                             <label for="inputPassword" class="col-4 col-form-label"></label>
                             <div class="col-8">
                                 <button type="reset" class="btn btn-secondary">Reset</button>
-                                <button type="button" id="btn_alert" class="btn btn-warning" disabled>Daftar</button>
+                                <button type="submit" class="btn btn-primary">Daftar</button>
+                                <!-- <button type="button" id="btn_alert" class="btn btn-warning" disabled>Daftar</button> -->
                             </div>
                         </div>
                     </form>

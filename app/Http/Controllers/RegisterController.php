@@ -13,7 +13,7 @@ class RegisterController extends Controller
         DB::beginTransaction();
         
         $data_user = [
-            'role_id'   =>3,
+            'role_id'   =>2,
             'name'      =>$r->username,
             'email'     =>$r->email,
             'password'  =>bcrypt($r->password)
