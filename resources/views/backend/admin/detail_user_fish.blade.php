@@ -146,7 +146,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card">
-                        <img src="{{$fish->fish_picture}}" alt="" class="img-thumbnail">
+                        <img src="{{url($fish->fish_picture)}}" alt="" class="img-thumbnail">
                     </div>
                 </div>
                 <div class="card-footer bg-white">
