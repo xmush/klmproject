@@ -146,7 +146,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card">
-                        <img src="{{asset(substr($fish->fish_picture, 1))}}" alt="" class="img-thumbnail">
+                        <img src="{{substr($fish->fish_picture, 1)}}" alt="" class="img-thumbnail">
                     </div>
                 </div>
                 <div class="card-footer bg-white">
