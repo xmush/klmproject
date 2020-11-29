@@ -16,7 +16,7 @@ class CreateTblGradeChampions extends Migration
         Schema::create('tbl_grade_champions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('cat_id')->nullable();
-            $table->enum('position', ['A','B','C','Runner Up'])->nullable();
+            $table->enum('position', ['A','B','C','Runner Up', 'Male Champion'])->nullable();
             $table->unsignedBigInteger('user_fish_id')->nullable();
             $table->timestamps();
         });

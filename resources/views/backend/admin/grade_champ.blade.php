@@ -203,6 +203,14 @@
                 } else {
                     $("#posisi option[value='Runner Up']").remove();
                 }
+
+                if(ukuran_id == 10) {
+                    $('#posisi').append('<option value="Runner Up"># Ruenner Up</option>');
+                    $('#posisi').append('<option value="Male Champion"># Male Champion</option>');
+                } else {
+                    $("#posisi option[value='Runner Up']").remove();
+                    $("#posisi option[value='Male Champion']").remove();
+                }
             }
         });
 
