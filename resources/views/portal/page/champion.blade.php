@@ -51,6 +51,8 @@
                     <div class="card-body text-center p-1">
                         @if ($grd->position == 'Runner Up')
                             <h5 class="font-card mb-1">{{$grd->position}} {{ucwords(strtolower($grd->user_fish->cat->grade))}}</h5>
+                        @elseif ($grd->position == 'Male Champion')
+                            <h5 class="font-card mb-1">{{$grd->position}}</h5>
                         @else
                             <h5 class="font-card mb-1">{{ucwords(strtolower($grd->user_fish->cat->grade))}} {{$grd->position}}</h5>
                         @endif
