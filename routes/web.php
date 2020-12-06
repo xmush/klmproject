@@ -24,9 +24,15 @@ Route::get('/point', 'PortalController@point')->name('point');
 Route::get('/login', 'LoginController@login')->name('login');
 Route::post('/login/auth', 'LoginController@auth');
 Route::get('/logout', 'LoginController@logout')->name('logout');
-Route::get('/register', 'LoginController@register')->name('register');
 
-Route::post('/guest/register', 'RegisterController@register')->name('user_register');
+// Route::get('/register', 'LoginController@register')->name('register');
+Route::get('/register', function() {
+    abort(404);
+})->name('register');
+Route::post('/guest/register', function() {
+    abort(404);
+})->name('user_register');
+// Route::post('/guest/register', 'RegisterController@register')->name('user_register');
 
 
 Route::group(['middleware' => ['auth', 'checkRole:user']], function () {
@@ -37,8 +43,15 @@ Route::group(['middleware' => ['auth', 'checkRole:user']], function () {
     Route::post('/user/update_picture_ikan/', 'UserController@updateFishPicture')->name('user.update_fish_picture');
     Route::post('/user/update_ikan/', 'UserController@updateFish')->name('user.update_fish');
     Route::get('/user/data_ikan/{id}', 'UserController@showDetailFish')->name('user.detail_fish');
-    Route::post('/store/register_ikan/', 'UserController@userStoreFish')->name('user.store_ikan');
-    Route::get('/user/register_ikan/{id}', 'UserController@userRegisterFish')->name('user.regis_ikan');
+    // Route::post('/store/register_ikan/', 'UserController@userStoreFish')->name('user.store_ikan');
+
+    Route::post('/store/register_ikan/', function() {abort(404);})->name('user.store_ikan');
+
+
+    // Route::get('/user/register_ikan/{id}', 'UserController@userRegisterFish')->name('user.regis_ikan');
+
+    Route::get('/user/register_ikan/{id}', function(){abort(404);})->name('user.regis_ikan');
+
     Route::post('/user/personal_data/', 'UserController@personalUpdateData')->name('user.update_personal');
     Route::get('/user/personal_data/{id}', 'UserController@personalData')->name('user.personal');
     Route::get('/user/fish_data/{id}', 'UserController@fishData')->name('user.fish');
